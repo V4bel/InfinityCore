@@ -38,7 +38,7 @@ This document excludes areas where vulnerabilities are common, such as networkin
 
 The public PoC turns this use-after-free into a full local privilege escalation. Starting as an unprivileged user, it exploits a vulnerable Ubuntu 26.04 `7.0.0-30-generic` system and launches a root shell.
 
-This vulnerability can also be used to gain full root privileges on a Samsung Galaxy S26 Ultra, starting from the untrusted_app domain with no additional application privileges. The Android exploit will be published once the vulnerability has been patched on Galaxy devices or an unrelated third party has publicly released an exploit. (Android exploit hash: `713a294f72abc46b6e12633117d40e85629ca2b998698fd75c76e523e0d53253`)
+This vulnerability can also be used to gain full root privileges on a **Samsung Galaxy S26 Ultra**, starting from the `untrusted_app` domain with no additional application privileges. The Android exploit will be published once the vulnerability has been patched on Galaxy devices or an unrelated third party has publicly released an exploit. (Android exploit hash: `713a294f72abc46b6e12633117d40e85629ca2b998698fd75c76e523e0d53253`)
 
 For the detailed technical information, [see here](timer/README.md).
 
