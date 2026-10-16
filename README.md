@@ -4,7 +4,7 @@
   <img src="assets/tux.png" width="550" alt="tux">
 </p>
 
-# Overview
+# Abstract
 
 This document describes six Linux kernel core vulnerabilities reported and patched by [Hyunwoo Kim (@v4bel)](https://x.com/v4bel).
 
