@@ -40,7 +40,7 @@ The public PoC turns this use-after-free into a full local privilege escalation.
 
 This vulnerability can also be used to gain full root privileges on a **Samsung Galaxy S26 Ultra**, starting from the `untrusted_app` domain with no additional application privileges. The Android exploit will be published once the vulnerability has been patched on Galaxy devices or an unrelated third party has publicly released an exploit. (Android exploit hash: `713a294f72abc46b6e12633117d40e85629ca2b998698fd75c76e523e0d53253`)
 
-For the detailed technical information, [see here](timer/README.md).
+For the detailed technical information, [see here](timer/).
 
 ## Signal (CVE-2026-98256): sigqueue UAF in exec()
 
@@ -48,7 +48,7 @@ For the detailed technical information, [see here](timer/README.md).
 
 The public PoC uses the surviving entry as an oracle to detect when the freed object has been reclaimed, then exploits the path that dequeues the crafted signal queue to run a root shell from an unprivileged account.
 
-For the detailed technical information, [see here](signal/README.md).
+For the detailed technical information, [see here](signal/).
 
 ## MM (CVE-2026-89754): OOB write in page table walk
 
@@ -56,7 +56,7 @@ For the detailed technical information, [see here](signal/README.md).
 
 The public PoC turns the repeated walk results into a controlled pattern spanning 40 bytes and places a credential slab in the physical page immediately after the temporary buffer. This write sets the UID and GID fields of `struct cred` to zero and runs a root shell from an unprivileged account.
 
-For the detailed technical information, [see here](mm/README.md).
+For the detailed technical information, [see here](mm/).
 
 ## Futex (CVE-2026-80775): Private hash UAF in prctl()
 
@@ -64,7 +64,7 @@ For the detailed technical information, [see here](mm/README.md).
 
 The public PoC reclaims the freed hash with a pipe ring, modifies a `pipe_buffer` flag, and overwrites the page cache of `/usr/bin/passwd` to achieve LPE.
 
-For the detailed technical information, [see here](futex/README.md).
+For the detailed technical information, [see here](futex/).
 
 ## Scheduler (CVE-2026-98385): mm_struct UAF in scheduler cache accounting
 
@@ -72,7 +72,7 @@ For the detailed technical information, [see here](futex/README.md).
 
 The public PoC uses the stale statistics write to corrupt the reference counter of a private futex hash, reclaims the freed hash with a pipe ring, and overwrites the page cache of `/usr/bin/newgrp` to achieve LPE.
 
-For the detailed technical information, [see here](sched/README.md).
+For the detailed technical information, [see here](sched/).
 
 ## SLAB (CVE-2026-97941): Partial list corruption in object refill
 
@@ -80,4 +80,4 @@ For the detailed technical information, [see here](sched/README.md).
 
 The public PoC repeatedly creates this race with System V message objects, causing a poison pointer dereference and a fatal kernel panic. An LPE chain has not yet been written.
 
-For the detailed technical information, [see here](slab/README.md).
+For the detailed technical information, [see here](slab/).
