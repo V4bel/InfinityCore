@@ -1,7 +1,7 @@
 # Infinity Core: Linux Kernel Core LPEs
 
 <p align="center">
-  <img src="assets/tux.png" width="550" alt="tux">
+  <img src="assets/tux.png" width="600" alt="tux">
 </p>
 
 # Abstract
